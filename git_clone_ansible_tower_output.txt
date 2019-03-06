@@ -1,0 +1,10 @@
+ubuntu@ip-172-31-87-211:~/virent_tests$ git clone http://github.com/ansible/ansible-tower-samples
+Cloning into 'ansible-tower-samples'...
+warning: redirecting to https://github.com/ansible/ansible-tower-samples/
+remote: Enumerating objects: 6, done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 6
+Unpacking objects: 100% (6/6), done.
+ubuntu@ip-172-31-87-211:~/virent_tests$ ls
+ansible-tower-samples  create_s3.yml  docker_image_output.txt  git_output.txt  jenkins_start.JPG  step1_output.txt
+ubuntu@ip-172-31-87-211:~/virent_tests$
+
