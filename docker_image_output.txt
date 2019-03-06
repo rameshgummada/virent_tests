@@ -1,0 +1,8 @@
+Docker image
+
+ubuntu@ip-172-31-87-211:~$ sudo docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                               NAMES
+3d698ff1f60d        jenkins/jenkins:lts   "/sbin/tini -- /usr/…"   18 minutes ago      Up 18 minutes       0.0.0.0:8080->8080/tcp, 50000/tcp   jenkins
+ubuntu@ip-172-31-87-211:~$ date
+Tue Mar  5 23:26:53 UTC 2019
+ubuntu@ip-172-31-87-211:~$

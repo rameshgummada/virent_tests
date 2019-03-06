@@ -1,0 +1,8 @@
+---
+
+- name: create bucket
+  hosts: localhost
+  connection: local
+  vars:
+     bucket: rameshgummada9
+     mode: create
