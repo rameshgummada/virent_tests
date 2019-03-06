@@ -1,0 +1,38 @@
+---
+ aws_access_key: AKIAJDZ4P54GAZJYRTRA
+ aws_secret_key: 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
+ aws_region: eu-west-2
+## Usage:
+##   ansible-playbook s3-playbook.yml
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    buckets:
+      'rameshgummadavellibuc' : 'arn:aws:s3:::rameshgummadavellibuc'
+      'com.example.bucket' : 'arn:aws:s3:::com.example.bucket'
+    user_account: '<UserAccountARN>' # e.g.: 'arn:aws:iam::123456789012:user/example-user'
+
+  tasks:
+    - name: Create empty buckets for backup
+      s3_bucket:
+        name: '{{ item.key }}'
+        state: present
+        policy:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                'AWS' : '{{ user_account }}'
+              Action: [
+                  's3:ListBucket',
+                  's3:DeleteObject',
+                  's3:GetObject',
+                  's3:PutObject',
+                  's3:PutObjectAcl'
+              ]
+              Resource: [
+                '{{item.value}}/*',
+                '{{item.value}}'
+              ]
+      with_dict: "{{ buckets }}"
