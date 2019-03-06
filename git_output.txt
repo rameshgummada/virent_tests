@@ -1,0 +1,33 @@
+ubuntu@ip-172-31-87-211:~/virent_tests$ git add .
+ubuntu@ip-172-31-87-211:~/virent_tests$ git status .
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   create_s3.yml
+        new file:   docker_image_output.txt
+        new file:   step1_output.txt
+
+ubuntu@ip-172-31-87-211:~/virent_tests$ git commit -m "initial commit"
+[master (root-commit) bfd6b12] initial commit
+ 3 files changed, 187 insertions(+)
+ create mode 100644 create_s3.yml
+ create mode 100644 docker_image_output.txt
+ create mode 100644 step1_output.txt
+ubuntu@ip-172-31-87-211:~/virent_tests$ git^C
+ubuntu@ip-172-31-87-211:~/virent_tests$ ^C
+ubuntu@ip-172-31-87-211:~/virent_tests$
+ubuntu@ip-172-31-87-211:~/virent_tests$
+ubuntu@ip-172-31-87-211:~/virent_tests$ git push origin master
+Username for 'https://github.com': rameshgummada
+Password for 'https://rameshgummada@github.com':
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.12 KiB | 2.12 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/rameshgummada/virent_tests.git
+ * [new branch]      master -> master
+ubuntu@ip-172-31-87-211:~/virent_tests$
